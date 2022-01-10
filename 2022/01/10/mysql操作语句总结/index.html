@@ -4,7 +4,7 @@
 
 <head>
     
-    <title>Hello World - 木对！个人空间</title>
+    <title>木对！个人空间</title>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -12,22 +12,22 @@
     
 
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/EPmax/CDN@master/touxiang.ico" type="image/x-icon" />
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="MySql操作语句总结 DDL操作数据库、表 操作数据库： 进入数据库：mysql -uroot -p&#x2F; mysql -u 用户名 -p 密码 -h 要连接的mysql服务器的ip地址 -p 端口号 退出：exit\quit 卸载：mysql -remove mysql 显示当前数据库下的所有数据库名称：show databases 在当前数据库下创建子数据库：create database if">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.github.io/2021/10/30/hello-world/index.html">
+<meta property="og:title" content="木对！个人空间">
+<meta property="og:url" content="http://example.github.io/2022/01/10/mysql%E6%93%8D%E4%BD%9C%E8%AF%AD%E5%8F%A5%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="木对！个人空间">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="MySql操作语句总结 DDL操作数据库、表 操作数据库： 进入数据库：mysql -uroot -p&#x2F; mysql -u 用户名 -p 密码 -h 要连接的mysql服务器的ip地址 -p 端口号 退出：exit\quit 卸载：mysql -remove mysql 显示当前数据库下的所有数据库名称：show databases 在当前数据库下创建子数据库：create database if">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-10-30T02:48:05.063Z">
-<meta property="article:modified_time" content="2021-10-30T02:48:05.063Z">
+<meta property="article:published_time" content="2022-01-10T11:22:00.284Z">
+<meta property="article:modified_time" content="2022-01-10T14:11:00.227Z">
 <meta property="article:author" content="木对！">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1641826758794">
+    <link rel="stylesheet" href="/css/style.css?v=1641826758784">
      
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1641826758794">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1641826758784">
     
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -125,32 +125,218 @@
   <article>
       
           <div class="nexmoe-post-cover" style="padding-bottom: 66.66666666666666%;"> 
-              <img data-src="https://cdn.jsdelivr.net/gh/EPmax/CDN@master/beijing.jpeg" data-sizes="auto" alt="Hello World" class="lazyload">
-              <h1>Hello World</h1>
+              <img data-src="https://cdn.jsdelivr.net/gh/EPmax/CDN@master/beijing.jpeg" data-sizes="auto" alt="" class="lazyload">
+              <h1></h1>
           </div>
       
       
       <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2021年10月30日</a>
-    <a><i class="nexmoefont icon-areachart"></i>75 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+    <a><i class="nexmoefont icon-calendar-fill"></i>2022年01月10日</a>
+    <a><i class="nexmoefont icon-areachart"></i>944 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 4 分钟</a>
 </div>
 
       
 
-      <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+      <h1 id="MySql操作语句总结"><a href="#MySql操作语句总结" class="headerlink" title="MySql操作语句总结"></a>MySql操作语句总结</h1><ul>
+<li><p><strong>DDL操作数据库、表</strong></p>
+<p><em>操作数据库：</em></p>
+<p>进入数据库：mysql -uroot -p/ mysql -u 用户名 -p 密码 -h 要连接的mysql服务器的ip地址 -p 端口号</p>
+<p>退出：exit\quit</p>
+<p>卸载：mysql -remove mysql</p>
+<p>显示当前数据库下的所有数据库名称：show databases</p>
+<p>在当前数据库下创建子数据库：create database if not exists 数据库名称</p>
+<p>删除数据库：drop database if exists 数据库名称</p>
+<p>进入数据库：use 数据库名称 </p>
+<p>查看当前使用的数据库：select database()</p>
+<p><em>操作表：</em></p>
+<p>显示当前数据库下所有的表：show tables</p>
+<p>查询表的结构：desc 表名称</p>
+<p>创建表：create tables 表名(</p>
+<pre><code>字段名1 数据类型,
+字段名2 数据类型,
+字段名3 数据类型,
+......,
+字段名n 数据类型
+</code></pre>
+<p>);\\注意最后一行不加逗号</p>
+<p>删除表：drop table if exists 表名</p>
+<p>修改表名：alter table 表名 rename to 新的表名</p>
+<p>添加一列：alter table 表名 add 列名 数据类型</p>
+<p>修改数据类型：alter table 表名 modify 列名 新的数据类型</p>
+<p>修改列名和数据类型：alter table 表名 change 新列名 新的数据类型</p>
+<p>删除表列：alter table 表名 drop 列名</p>
+</li>
+<li><p><strong>DML操作数据（增、删、改）</strong></p>
+</li>
+</ul>
+<p>  给指定列添加数据：instert into 表名(列名1,列名2,列名3,…….) values(值1,值2,……);</p>
+<p>  修改表数据：updata 表名 set 列名1=值1,列名2=值2,…… where 条件</p>
+<p>  删除表数据：delete from 表名 where 条件\\不加where条件将删除所有数据</p>
+<ul>
+<li><p><strong>DQL查询操作</strong></p>
+<ul>
+<li><p><em>基础查询</em></p>
+<p>查询所有：select * from 表名;</p>
+<p>按列查询：select 列名1,列名2,…… from 表名;</p>
+<p>去除重复记录：select distinct 列名1,列名2,…… from 表名;</p>
+<p>起别名：as(as可以省略)</p>
+</li>
+<li><p><em><strong>条件查询</strong></em></p>
+<p>  按列查询：select 列名1,列名2,…… from 表名 where 条件1 and 条件2 and……</p>
+<ul>
+<li><p>between语句 等价于 …&gt;=x&gt;=…；可用于按日期条件查询</p>
+</li>
+<li><p>in语句的使用：select 列名1,列名2,…… from 表名 where 字段名 in(1,2,3,<br>…)等价于 select 列名1,列名2,…… from 表名 where 字段名=1 or 字段名=2 or 字段名=3 or …</p>
+</li>
+<li><p>null数据的比较不能使用=和!=，要使用is和is not。</p>
+</li>
+<li><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&gt;</td>
+<td>大于</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>小于</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>大于等于</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>小于等于</td>
+</tr>
+<tr>
+<td>=</td>
+<td>等于</td>
+</tr>
+<tr>
+<td>&lt;&gt;或!=</td>
+<td>不等于</td>
+</tr>
+<tr>
+<td>between…and…</td>
+<td>在某个范围之内，包含边界</td>
+</tr>
+<tr>
+<td>in()</td>
+<td>多选一</td>
+</tr>
+<tr>
+<td>like 占位符</td>
+<td>模糊查询，_代表单个任意字符，%代表多个任意字符</td>
+</tr>
+<tr>
+<td>is null</td>
+<td>是null</td>
+</tr>
+<tr>
+<td>is not null</td>
+<td>不是null</td>
+</tr>
+<tr>
+<td>and和&amp;&amp;</td>
+<td>并且</td>
+</tr>
+<tr>
+<td>or和||</td>
+<td>或者</td>
+</tr>
+<tr>
+<td>not和!</td>
+<td>非，不是</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><em><strong>分组查询</strong></em></p>
+<ul>
+<li><p>1、聚合函数</p>
+<ul>
+<li><p>概念：将一列数据作为一个整体，进行纵向计算</p>
+</li>
+<li><p>语法：select 聚合函数名(列名) from 表名;</p>
+</li>
+<li><p>聚合函数：</p>
+<table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>count(列名)</td>
+<td>统计数量</td>
+</tr>
+<tr>
+<td>max(列名)</td>
+<td>最大值</td>
+</tr>
+<tr>
+<td>min(列名)</td>
+<td>最小值</td>
+</tr>
+<tr>
+<td>sun(列名)</td>
+<td>求和</td>
+</tr>
+<tr>
+<td>avg(列名)</td>
+<td>平均值</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>注意：null不参与所有聚合函数的运算</p>
+</li>
+</ul>
+</li>
+<li><p>2、分组查询</p>
+<ul>
+<li>语法： select 聚合函数名(列名) from 表名  where条件（可省略）group by 分组字段名 having条件(分组后条件过滤，可省略) ;   <em>例：select sex,avg(math) from 表名 group by sex;</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><em><strong>排序查询</strong></em></p>
+<p>排序查询语句：按列查询：select 列名1,列名2,…… from 表名 order by 排序字段名1 排序方式（可省略）,排序字段名2 排序方式（可省略）,…</p>
+<ul>
+<li><p>排序方式：</p>
+<ul>
+<li><p>asc(升序)</p>
+</li>
+<li><p>desc(降序)</p>
+</li>
+</ul>
+</li>
+<li><p>如果排序字段值一样，则按下一个排序字段的值进行排序</p>
+</li>
+</ul>
+</li>
+<li><p><em><strong>分页查询</strong></em></p>
+<ul>
+<li><p>语法：select 列名1,列名2,…… from 表名 limit 起始索引,查询条目;</p>
+</li>
+<li><p>  起始索引=(当前页码-1)*每页显示的条数</p>
+</li>
+<li><p>  注意：limit是MySQL的方言，Oracle使用rownumber，SQL Server使用top</p>
+</li>
+</ul>
+</li>
+</ul>
 
   </article>
 
@@ -158,7 +344,7 @@
       
     <div class="nexmoe-post-copyright">
         <strong>Author：</strong>木对！<br>
-        <strong>Link：</strong><a href="http://example.github.io/2021/10/30/hello-world/" title="http:&#x2F;&#x2F;example.github.io&#x2F;2021&#x2F;10&#x2F;30&#x2F;hello-world&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.github.io&#x2F;2021&#x2F;10&#x2F;30&#x2F;hello-world&#x2F;</a><br>
+        <strong>Link：</strong><a href="http://example.github.io/2022/01/10/mysql%E6%93%8D%E4%BD%9C%E8%AF%AD%E5%8F%A5%E6%80%BB%E7%BB%93/" title="http:&#x2F;&#x2F;example.github.io&#x2F;2022&#x2F;01&#x2F;10&#x2F;mysql%E6%93%8D%E4%BD%9C%E8%AF%AD%E5%8F%A5%E6%80%BB%E7%BB%93&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.github.io&#x2F;2022&#x2F;01&#x2F;10&#x2F;mysql%E6%93%8D%E4%BD%9C%E8%AF%AD%E5%8F%A5%E6%80%BB%E7%BB%93&#x2F;</a><br>
         
             <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
         
@@ -204,7 +390,7 @@
                               <button class="mdui-fab catalog" style="overflow:unset;">
                                   <i class="nexmoefont icon-i-catalog"></i>
                                   <div class="nexmoe-toc">
-                                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                                      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MySql%E6%93%8D%E4%BD%9C%E8%AF%AD%E5%8F%A5%E6%80%BB%E7%BB%93"><span class="toc-number">1.</span> <span class="toc-text">MySql操作语句总结</span></a></li></ol>
                                   </div>
                               </button>
                           
@@ -236,7 +422,7 @@
 
  
 
-<script async src="/js/app.js?v=1641826758797"></script>
+<script async src="/js/app.js?v=1641826758792"></script>
 
 
 
